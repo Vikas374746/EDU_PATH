@@ -1,0 +1,260 @@
+{
+  "basic_queries": [
+    {
+      "id": "res_sql_01",
+      "title": "SQL Basics for Beginners in 15 Minutes",
+      "author": "Alex The Analyst",
+      "url": "https://www.youtube.com/watch?v=7mz73uXD9DA",
+      "type": "video",
+      "duration_minutes": 15,
+      "difficulty": "Beginner",
+      "reason_selected": "Explains foundational SELECT, WHERE, and sorting syntax with business analytics context."
+    },
+    {
+      "id": "res_sql_02",
+      "title": "W3Schools SQL Quick Reference Guide",
+      "author": "W3Schools",
+      "url": "https://www.w3schools.com/sql/sql_where.asp",
+      "type": "documentation",
+      "duration_minutes": 8,
+      "difficulty": "Beginner",
+      "reason_selected": "Interactive syntax reference for query structure."
+    }
+  ],
+  "aggregations_group_by": [
+    {
+      "id": "res_sql_03",
+      "title": "SQL Group By and Aggregate Functions (SUM, COUNT, AVG)",
+      "author": "Alex The Analyst",
+      "url": "https://www.youtube.com/watch?v=k3Ywhq6h-z8",
+      "type": "video",
+      "duration_minutes": 18,
+      "difficulty": "Beginner",
+      "reason_selected": "Clear breakdown of aggregating metrics and slicing data with GROUP BY."
+    }
+  ],
+  "multi_table_joins": [
+    {
+      "id": "res_sql_04",
+      "title": "SQL Joins Explained Visually: INNER, LEFT, RIGHT, FULL",
+      "author": "Luke Barousse",
+      "url": "https://www.youtube.com/watch?v=9jmg_c7N438",
+      "type": "video",
+      "duration_minutes": 22,
+      "difficulty": "Intermediate",
+      "reason_selected": "Visual Venn-diagram and relational key representation to eliminate Cartesian product errors."
+    },
+    {
+      "id": "res_sql_05",
+      "title": "Multi-Table JOIN Logic and Relational Keys Deep-Dive",
+      "author": "freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=HXV3zeRRBAc",
+      "type": "video",
+      "duration_minutes": 30,
+      "difficulty": "Intermediate",
+      "reason_selected": "Real-world schema joining 3+ tables with primary and foreign key mapping."
+    },
+    {
+      "id": "res_sql_06",
+      "title": "PostgreSQL Official Docs: Table Expressions & Joins",
+      "author": "PostgreSQL Global Development Group",
+      "url": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+      "type": "documentation",
+      "duration_minutes": 12,
+      "difficulty": "Intermediate",
+      "reason_selected": "Definitive guide on join execution semantics and join condition placement."
+    }
+  ],
+  "window_functions": [
+    {
+      "id": "res_sql_07",
+      "title": "SQL Window Functions in 20 Minutes (ROW_NUMBER, RANK, DENSE_RANK)",
+      "author": "Luke Barousse",
+      "url": "https://www.youtube.com/watch?v=Ww71knvhQ-s",
+      "type": "video",
+      "duration_minutes": 20,
+      "difficulty": "Advanced",
+      "reason_selected": "Crucial next-step after mastering multi-table relational joins for ranking metrics."
+    }
+  ],
+  "sql_basics": [
+    {
+      "id": "res_sql_01",
+      "title": "SQL Basics for Beginners in 15 Minutes",
+      "author": "Alex The Analyst",
+      "url": "https://www.youtube.com/watch?v=7mz73uXD9DA",
+      "type": "video",
+      "duration_minutes": 15,
+      "difficulty": "Beginner",
+      "reason_selected": "Explains foundational SELECT, WHERE, and sorting syntax with business analytics context."
+    },
+    {
+      "id": "res_sql_02",
+      "title": "W3Schools SQL Quick Reference Guide",
+      "author": "W3Schools",
+      "url": "https://www.w3schools.com/sql/sql_where.asp",
+      "type": "documentation",
+      "duration_minutes": 8,
+      "difficulty": "Beginner",
+      "reason_selected": "Interactive syntax reference for query structure."
+    }
+  ],
+  "sql_aggregations": [
+    {
+      "id": "res_sql_03",
+      "title": "SQL Group By and Aggregate Functions (SUM, COUNT, AVG)",
+      "author": "Alex The Analyst",
+      "url": "https://www.youtube.com/watch?v=k3Ywhq6h-z8",
+      "type": "video",
+      "duration_minutes": 18,
+      "difficulty": "Beginner",
+      "reason_selected": "Clear breakdown of aggregating metrics and slicing data with GROUP BY."
+    }
+  ],
+  "sql_joins": [
+    {
+      "id": "res_sql_04",
+      "title": "SQL Joins Explained Visually: INNER, LEFT, RIGHT, FULL",
+      "author": "Luke Barousse",
+      "url": "https://www.youtube.com/watch?v=9jmg_c7N438",
+      "type": "video",
+      "duration_minutes": 22,
+      "difficulty": "Intermediate",
+      "reason_selected": "Visual Venn-diagram and relational key representation to eliminate Cartesian product errors."
+    },
+    {
+      "id": "res_sql_05",
+      "title": "Multi-Table JOIN Logic and Relational Keys Deep-Dive",
+      "author": "freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=HXV3zeRRBAc",
+      "type": "video",
+      "duration_minutes": 30,
+      "difficulty": "Intermediate",
+      "reason_selected": "Real-world schema joining 3+ tables with primary and foreign key mapping."
+    },
+    {
+      "id": "res_sql_06",
+      "title": "PostgreSQL Official Docs: Table Expressions & Joins",
+      "author": "PostgreSQL Global Development Group",
+      "url": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+      "type": "documentation",
+      "duration_minutes": 12,
+      "difficulty": "Intermediate",
+      "reason_selected": "Definitive guide on join execution semantics and join condition placement."
+    }
+  ],
+  "sql_window_functions": [
+    {
+      "id": "res_sql_07",
+      "title": "SQL Window Functions in 20 Minutes (ROW_NUMBER, RANK, DENSE_RANK)",
+      "author": "Luke Barousse",
+      "url": "https://www.youtube.com/watch?v=Ww71knvhQ-s",
+      "type": "video",
+      "duration_minutes": 20,
+      "difficulty": "Advanced",
+      "reason_selected": "Crucial next-step after mastering multi-table relational joins for ranking metrics."
+    }
+  ],
+  "remediation_joins": [
+    {
+      "id": "res_sql_remed_01",
+      "title": "Targeted Drill: Fixing Common SQL JOIN Mistakes & Cartesian Products",
+      "author": "Alex The Analyst",
+      "url": "https://www.youtube.com/watch?v=9jmg_c7N438&t=320s",
+      "type": "video",
+      "duration_minutes": 14,
+      "difficulty": "Remedial",
+      "reason_selected": "Directly diagnoses why omitting join keys leads to duplicate rows and incorrect aggregates."
+    },
+    {
+      "id": "res_sql_remed_02",
+      "title": "Interactive Multi-Table JOIN Sandboxing & Cheat Sheet",
+      "author": "DataCamp / SkillForge Labs",
+      "url": "https://mode.com/sql-tutorial/sql-joins-where-vs-on/",
+      "type": "guide",
+      "duration_minutes": 10,
+      "difficulty": "Remedial",
+      "reason_selected": "Step-by-step walkthrough showing differences between WHERE clauses and ON conditions in multi-table queries."
+    }
+  ],
+  "excel": [
+    {
+      "id": "res_xl_01",
+      "title": "Excel for Data Analysts: Pivot Tables & XLOOKUP",
+      "author": "Kenji Explains",
+      "url": "https://www.youtube.com/watch?v=Vl0v_o0_42E",
+      "type": "video",
+      "duration_minutes": 25,
+      "difficulty": "Intermediate",
+      "reason_selected": "Fast-paced business modeling using modern lookup formulas."
+    }
+  ],
+  "excel_lookups": [
+    {
+      "id": "res_xl_01",
+      "title": "Excel for Data Analysts: Pivot Tables & XLOOKUP",
+      "author": "Kenji Explains",
+      "url": "https://www.youtube.com/watch?v=Vl0v_o0_42E",
+      "type": "video",
+      "duration_minutes": 25,
+      "difficulty": "Intermediate",
+      "reason_selected": "Fast-paced business modeling using modern lookup formulas."
+    }
+  ],
+  "powerbi": [
+    {
+      "id": "res_pbi_01",
+      "title": "Power BI Full Course for Beginners: Star Schema & DAX",
+      "author": "Avi Singh - PowerBIPro",
+      "url": "https://www.youtube.com/watch?v=TmhQCQr_8CA",
+      "type": "video",
+      "duration_minutes": 45,
+      "difficulty": "Intermediate",
+      "reason_selected": "Shows how SQL relational concepts translate directly into dimensional reporting."
+    }
+  ],
+  "powerbi_modeling": [
+    {
+      "id": "res_pbi_01",
+      "title": "Power BI Full Course for Beginners: Star Schema & DAX",
+      "author": "Avi Singh - PowerBIPro",
+      "url": "https://www.youtube.com/watch?v=TmhQCQr_8CA",
+      "type": "video",
+      "duration_minutes": 45,
+      "difficulty": "Intermediate",
+      "reason_selected": "Shows how SQL relational concepts translate directly into dimensional reporting."
+    },
+    {
+      "id": "res_pbi_02",
+      "title": "Guy in a Cube: Star Schema vs Normalized Tables",
+      "author": "Guy in a Cube",
+      "url": "https://www.youtube.com/watch?v=1x3N4a7Asw4",
+      "type": "video",
+      "duration_minutes": 14,
+      "difficulty": "Intermediate",
+      "reason_selected": "Visual breakdown of building high-performance star schema models in BI."
+    }
+  ],
+  "python_pandas": [
+    {
+      "id": "res_py_01",
+      "title": "Pandas Data Analysis Tutorial for Beginners",
+      "author": "Keith Galli",
+      "url": "https://www.youtube.com/watch?v=vmEHCJofslg",
+      "type": "video",
+      "duration_minutes": 55,
+      "difficulty": "Intermediate",
+      "reason_selected": "Practical business dataset exploration, filtering, and aggregation using Pandas."
+    },
+    {
+      "id": "res_py_02",
+      "title": "10 Minutes to Pandas Official Guide",
+      "author": "Pandas Development Team",
+      "url": "https://pandas.pydata.org/docs/user_guide/10min.html",
+      "type": "documentation",
+      "duration_minutes": 15,
+      "difficulty": "Intermediate",
+      "reason_selected": "Essential cheat sheet for Series, DataFrames, merging, and reshaping."
+    }
+  ]
+}

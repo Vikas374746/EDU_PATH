@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Surface & Base Palette - Linear / Notion inspired */
+  --bg-app: #0C0D0F;
+  --bg-sidebar: #101216;
+  --bg-surface: #14171C;
+  --bg-surface-elevated: #1B1E25;
+  --bg-surface-hover: #1E222A;
+  --bg-surface-active: #252A34;
+  
+  /* Borders & Dividers */
+  --border-subtle: #20242C;
+  --border-default: #2A2F3A;
+  --border-focus: #4F5666;
+  
+  /* Typography */
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --text-disabled: #4B5563;
+
+  /* Restrained Functional Accents */
+  --accent-primary: #3B82F6;
+  --accent-primary-hover: #2563EB;
+  --accent-surface: rgba(59, 130, 246, 0.08);
+  --accent-border: rgba(59, 130, 246, 0.25);
+
+  /* Status Tokens - Subdued, high contrast */
+  --status-strong-text: #34D399;
+  --status-strong-bg: rgba(16, 185, 129, 0.08);
+  --status-strong-border: rgba(16, 185, 129, 0.2);
+
+  --status-dev-text: #60A5FA;
+  --status-dev-bg: rgba(59, 130, 246, 0.08);
+  --status-dev-border: rgba(59, 130, 246, 0.2);
+
+  --status-weak-text: #FBBF24;
+  --status-weak-bg: rgba(245, 158, 11, 0.08);
+  --status-weak-border: rgba(245, 158, 11, 0.2);
+
+  --status-missing-text: #F87171;
+  --status-missing-bg: rgba(239, 68, 68, 0.08);
+  --status-missing-border: rgba(239, 68, 68, 0.2);
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout, Radii & Elevations */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utility Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.label-micro {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+/* Surface Cards */
+.sf-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.sf-card-interactive:hover {
+  border-color: var(--border-default);
+  background: var(--bg-surface-hover);
+}
+
+.sf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Linear-style Buttons */
+.sf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+  outline: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sf-btn-primary {
+  background: #EDEDED;
+  color: #0F1115;
+  border-color: #EDEDED;
+}
+
+.sf-btn-primary:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.sf-btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.sf-btn-secondary:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-default);
+}
+
+.sf-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.sf-btn-ghost:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+/* Badges & Status Pills */
+.sf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+}
+
+.sf-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.sf-badge-strong {
+  background: var(--status-strong-bg);
+  color: var(--status-strong-text);
+  border-color: var(--status-strong-border);
+}
+.sf-badge-strong .sf-badge-dot {
+  background: var(--status-strong-text);
+}
+
+.sf-badge-developing {
+  background: var(--status-dev-bg);
+  color: var(--status-dev-text);
+  border-color: var(--status-dev-border);
+}
+.sf-badge-developing .sf-badge-dot {
+  background: var(--status-dev-text);
+}
+
+.sf-badge-weak {
+  background: var(--status-weak-bg);
+  color: var(--status-weak-text);
+  border-color: var(--status-weak-border);
+}
+.sf-badge-weak .sf-badge-dot {
+  background: var(--status-weak-text);
+}
+
+.sf-badge-missing {
+  background: var(--status-missing-bg);
+  color: var(--status-missing-text);
+  border-color: var(--status-missing-border);
+}
+.sf-badge-missing .sf-badge-dot {
+  background: var(--status-missing-text);
+}
+
+.sf-badge-neutral {
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+/* Inputs */
+.sf-input {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.sf-input:focus {
+  border-color: var(--border-focus);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-default);
+}

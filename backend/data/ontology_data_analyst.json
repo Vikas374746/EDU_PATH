@@ -1,0 +1,125 @@
+{
+  "role": "Data Analyst",
+  "description": "Transforms raw data into actionable business insights using SQL, Excel, Python, and BI tools.",
+  "domains": [
+    {
+      "id": "sql",
+      "name": "SQL & Relational Databases",
+      "weight": 0.35,
+      "subskills": [
+        {
+          "id": "sql_basics",
+          "name": "Basic Queries & Filtering",
+          "description": "SELECT, WHERE, ORDER BY, LIMIT, operators",
+          "prerequisites": [],
+          "level": "Foundational"
+        },
+        {
+          "id": "sql_aggregations",
+          "name": "Aggregations & Grouping",
+          "description": "COUNT, SUM, AVG, GROUP BY, HAVING",
+          "prerequisites": ["sql_basics"],
+          "level": "Foundational"
+        },
+        {
+          "id": "sql_joins",
+          "name": "Relational Multi-Table JOINs",
+          "description": "INNER JOIN, LEFT JOIN, FULL OUTER JOIN, relational keys and join conditions",
+          "prerequisites": ["sql_basics", "sql_aggregations"],
+          "level": "Core"
+        },
+        {
+          "id": "sql_window_functions",
+          "name": "Window Functions & CTEs",
+          "description": "ROW_NUMBER, RANK, DENSE_RANK, PARTITION BY, Common Table Expressions",
+          "prerequisites": ["sql_joins"],
+          "level": "Advanced"
+        }
+      ]
+    },
+    {
+      "id": "excel",
+      "name": "Spreadsheet & Business Modeling",
+      "weight": 0.20,
+      "subskills": [
+        {
+          "id": "excel_formulas",
+          "name": "Formulas & Logical Functions",
+          "description": "SUMIFS, COUNTIFS, IF, AND/OR logic",
+          "prerequisites": [],
+          "level": "Foundational"
+        },
+        {
+          "id": "excel_lookups",
+          "name": "Lookups & Pivot Tables",
+          "description": "XLOOKUP, VLOOKUP, INDEX/MATCH, Pivot Tables & Slicers",
+          "prerequisites": ["excel_formulas"],
+          "level": "Core"
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python for Data Analysis",
+      "weight": 0.20,
+      "subskills": [
+        {
+          "id": "python_pandas",
+          "name": "Data Wrangling with Pandas",
+          "description": "DataFrames, filtering, merging, missing value imputation",
+          "prerequisites": [],
+          "level": "Core"
+        },
+        {
+          "id": "python_viz",
+          "name": "Data Visualization",
+          "description": "Matplotlib and Seaborn for business exploratory charts",
+          "prerequisites": ["python_pandas"],
+          "level": "Core"
+        }
+      ]
+    },
+    {
+      "id": "bi_tools",
+      "name": "Business Intelligence & Reporting",
+      "weight": 0.15,
+      "subskills": [
+        {
+          "id": "powerbi_modeling",
+          "name": "Data Modeling & Star Schema",
+          "description": "Relationships, fact vs dimension tables, cardinalities",
+          "prerequisites": ["sql_joins"],
+          "level": "Core"
+        },
+        {
+          "id": "powerbi_dax",
+          "name": "DAX & Executive Dashboards",
+          "description": "Measures, CALCULATE, interactive KPI report design",
+          "prerequisites": ["powerbi_modeling"],
+          "level": "Core"
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "Applied Statistics & Metrics",
+      "weight": 0.10,
+      "subskills": [
+        {
+          "id": "stats_descriptive",
+          "name": "Descriptive Statistics & Distributions",
+          "description": "Mean, median, variance, standard deviation, skewness",
+          "prerequisites": [],
+          "level": "Foundational"
+        },
+        {
+          "id": "stats_ab_testing",
+          "name": "Hypothesis Testing & A/B Experiments",
+          "description": "p-values, significance, t-tests, sample size determination",
+          "prerequisites": ["stats_descriptive"],
+          "level": "Core"
+        }
+      ]
+    }
+  ]
+}

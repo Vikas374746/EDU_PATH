@@ -1,0 +1,66 @@
+{
+  "id": "challenge_sql_join_01",
+  "title": "Practical Skill-Proof: Multi-Table Revenue by Customer Tier",
+  "domain": "SQL",
+  "target_subskill": "sql_joins",
+  "secondary_subskill": "sql_aggregations",
+  "difficulty": "Intermediate",
+  "prompt": "The business executive team wants to understand how spending is distributed across customer tiers. Write a SQL query to calculate the total sales revenue (quantity * unit_price) grouped by customer tier ('Gold', 'Silver', 'Bronze'). Your result must return columns `tier` and `total_revenue`, sorted by `total_revenue` descending.",
+  "tables": [
+    {
+      "name": "customers",
+      "columns": [
+        {"name": "customer_id", "type": "INT", "is_pk": true},
+        {"name": "customer_name", "type": "VARCHAR(100)"},
+        {"name": "tier", "type": "VARCHAR(20)", "note": "'Gold', 'Silver', 'Bronze'"}
+      ],
+      "sample_rows": [
+        {"customer_id": 101, "customer_name": "Apex Retail", "tier": "Gold"},
+        {"customer_id": 102, "customer_name": "BlueSky Tech", "tier": "Silver"},
+        {"customer_id": 103, "customer_name": "Cedar Logistics", "tier": "Bronze"}
+      ]
+    },
+    {
+      "name": "orders",
+      "columns": [
+        {"name": "order_id", "type": "INT", "is_pk": true},
+        {"name": "customer_id", "type": "INT", "is_fk": true, "references": "customers.customer_id"},
+        {"name": "order_date", "type": "DATE"},
+        {"name": "status", "type": "VARCHAR(20)"}
+      ],
+      "sample_rows": [
+        {"order_id": 5001, "customer_id": 101, "order_date": "2026-03-01", "status": "Completed"},
+        {"order_id": 5002, "customer_id": 101, "order_date": "2026-03-05", "status": "Completed"},
+        {"order_id": 5003, "customer_id": 102, "order_date": "2026-03-08", "status": "Completed"}
+      ]
+    },
+    {
+      "name": "order_items",
+      "columns": [
+        {"name": "item_id", "type": "INT", "is_pk": true},
+        {"name": "order_id", "type": "INT", "is_fk": true, "references": "orders.order_id"},
+        {"name": "product_name", "type": "VARCHAR(100)"},
+        {"name": "quantity", "type": "INT"},
+        {"name": "unit_price", "type": "DECIMAL(10,2)"}
+      ],
+      "sample_rows": [
+        {"item_id": 901, "order_id": 5001, "product_name": "Enterprise License", "quantity": 2, "unit_price": 1200.00},
+        {"item_id": 902, "order_id": 5002, "product_name": "Analytics Addon", "quantity": 1, "unit_price": 500.00},
+        {"item_id": 903, "order_id": 5003, "product_name": "Starter Seat", "quantity": 4, "unit_price": 150.00}
+      ]
+    }
+  ],
+  "starter_code": "-- Write your query joining customers, orders, and order_items\nSELECT \n    c.tier,\n    SUM(oi.quantity * oi.unit_price) AS total_revenue\nFROM customers c\n-- Complete the JOIN and GROUP BY logic below\n",
+  "canonical_buggy_query": "SELECT \n    c.tier, \n    SUM(oi.quantity * oi.unit_price) AS total_revenue\nFROM customers c, orders o, order_items oi\nGROUP BY c.tier\nORDER BY total_revenue DESC;",
+  "canonical_correct_query": "SELECT \n    c.tier, \n    SUM(oi.quantity * oi.unit_price) AS total_revenue\nFROM customers c\nINNER JOIN orders o ON c.customer_id = o.customer_id\nINNER JOIN order_items oi ON o.order_id = oi.order_id\nGROUP BY c.tier\nORDER BY total_revenue DESC;",
+  "rubrics": {
+    "sql_aggregations": {
+      "name": "Aggregations & Grouping",
+      "criteria": "Proper calculation using SUM(quantity * unit_price) and grouping by c.tier with ORDER BY total_revenue DESC."
+    },
+    "sql_joins": {
+      "name": "Relational Multi-Table JOIN Logic",
+      "criteria": "Explicit relational joins between customers.customer_id = orders.customer_id AND orders.order_id = order_items.order_id without Cartesian product."
+    }
+  }
+}

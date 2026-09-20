@@ -1,0 +1,168 @@
+{
+  "role": "Data Analyst",
+  "version": "1.0.0",
+  "description": "Transforms raw data into actionable business insights using SQL, Excel, Python, and BI tools.",
+  "domains": [
+    {
+      "id": "sql",
+      "name": "SQL & Relational Databases",
+      "weight": 0.35,
+      "description": "Core relational query skills required for virtually every data analyst role.",
+      "subskills": [
+        {
+          "id": "basic_queries",
+          "name": "Basic Queries & Filtering",
+          "description": "SELECT, WHERE, ORDER BY, LIMIT, comparison and logical operators, aliases.",
+          "prerequisites": [],
+          "level": "Foundational",
+          "estimated_hours": 4,
+          "learning_objective": "Write accurate single-table SELECT queries to filter, sort, and limit datasets.",
+          "proof_type": "sql_challenge"
+        },
+        {
+          "id": "aggregations_group_by",
+          "name": "Aggregations & GROUP BY",
+          "description": "COUNT, SUM, AVG, MIN, MAX, GROUP BY, HAVING, aggregate filters.",
+          "prerequisites": ["basic_queries"],
+          "level": "Foundational",
+          "estimated_hours": 5,
+          "learning_objective": "Summarize datasets with aggregate functions and produce grouped business metrics.",
+          "proof_type": "sql_challenge"
+        },
+        {
+          "id": "multi_table_joins",
+          "name": "Multi-Table JOINs",
+          "description": "INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, self-joins, join conditions on foreign keys, multi-table chaining.",
+          "prerequisites": ["basic_queries", "aggregations_group_by"],
+          "level": "Core",
+          "estimated_hours": 8,
+          "learning_objective": "Combine data from two or more related tables using appropriate join types and produce accurate merged result sets.",
+          "proof_type": "sql_challenge",
+          "is_adaptive_focus": true
+        },
+        {
+          "id": "window_functions",
+          "name": "Window Functions & CTEs",
+          "description": "ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG, PARTITION BY, ORDER BY in window frame, Common Table Expressions (WITH clause), recursive CTEs.",
+          "prerequisites": ["multi_table_joins"],
+          "level": "Advanced",
+          "estimated_hours": 10,
+          "learning_objective": "Apply window functions for running totals, rankings, and period comparisons without collapsing rows.",
+          "proof_type": "sql_challenge"
+        }
+      ]
+    },
+    {
+      "id": "excel",
+      "name": "Excel & Spreadsheets",
+      "weight": 0.20,
+      "description": "Spreadsheet fluency for ad-hoc analysis, reporting, and business stakeholder communication.",
+      "subskills": [
+        {
+          "id": "excel_formulas",
+          "name": "Formulas & Logical Functions",
+          "description": "SUMIFS, COUNTIFS, IF / IFS, AND / OR / NOT, IFERROR, date and text functions.",
+          "prerequisites": [],
+          "level": "Foundational",
+          "estimated_hours": 4,
+          "learning_objective": "Build dynamic formula-driven reports using conditional logic and multi-criteria aggregations.",
+          "proof_type": "exercise"
+        },
+        {
+          "id": "excel_lookups",
+          "name": "Lookups & Pivot Tables",
+          "description": "XLOOKUP, VLOOKUP, INDEX/MATCH, Pivot Tables, Pivot Charts, Slicers, Power Query basics.",
+          "prerequisites": ["excel_formulas"],
+          "level": "Core",
+          "estimated_hours": 5,
+          "learning_objective": "Cross-reference datasets and create self-refreshing summary dashboards for non-technical stakeholders.",
+          "proof_type": "exercise"
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python Data Wrangling",
+      "weight": 0.20,
+      "description": "Python-based data manipulation and exploratory analysis for scalable reporting pipelines.",
+      "subskills": [
+        {
+          "id": "python_pandas",
+          "name": "Data Wrangling with Pandas",
+          "description": "DataFrames, Series, read_csv/read_sql, filtering, groupby, merging/joining, reshaping, handling nulls.",
+          "prerequisites": [],
+          "level": "Core",
+          "estimated_hours": 8,
+          "learning_objective": "Load, clean, and transform tabular datasets programmatically using Pandas.",
+          "proof_type": "exercise"
+        },
+        {
+          "id": "python_viz",
+          "name": "Data Visualization",
+          "description": "Matplotlib, Seaborn, bar/line/scatter/heatmap charts, labeling, storytelling with data.",
+          "prerequisites": ["python_pandas"],
+          "level": "Core",
+          "estimated_hours": 5,
+          "learning_objective": "Produce publication-quality charts that communicate analytical findings to business audiences.",
+          "proof_type": "exercise"
+        }
+      ]
+    },
+    {
+      "id": "bi_tools",
+      "name": "BI & Dashboards",
+      "weight": 0.15,
+      "description": "Business Intelligence tooling for interactive executive dashboards and self-serve analytics.",
+      "subskills": [
+        {
+          "id": "powerbi_modeling",
+          "name": "Data Modeling & Star Schema",
+          "description": "Fact vs dimension tables, relationships, cardinality (1:M, M:M), star vs snowflake schema.",
+          "prerequisites": ["multi_table_joins"],
+          "level": "Core",
+          "estimated_hours": 6,
+          "learning_objective": "Design a star schema data model that supports accurate slice-and-dice analysis in a BI tool.",
+          "proof_type": "design_review"
+        },
+        {
+          "id": "powerbi_dax",
+          "name": "DAX & Executive Dashboards",
+          "description": "Measures vs calculated columns, CALCULATE, FILTER, SUMX, time-intelligence functions, KPI visuals.",
+          "prerequisites": ["powerbi_modeling"],
+          "level": "Core",
+          "estimated_hours": 8,
+          "learning_objective": "Author DAX measures and build interactive executive dashboards with drill-through and KPI tracking.",
+          "proof_type": "design_review"
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics & Metrics",
+      "weight": 0.10,
+      "description": "Statistical reasoning to validate findings, design experiments, and communicate uncertainty.",
+      "subskills": [
+        {
+          "id": "stats_descriptive",
+          "name": "Descriptive Statistics & Distributions",
+          "description": "Mean, median, mode, variance, standard deviation, skewness, histograms, box plots.",
+          "prerequisites": [],
+          "level": "Foundational",
+          "estimated_hours": 4,
+          "learning_objective": "Summarize and interpret data distributions to identify outliers and describe central tendency.",
+          "proof_type": "exercise"
+        },
+        {
+          "id": "stats_ab_testing",
+          "name": "Hypothesis Testing & A/B Experiments",
+          "description": "Null/alternative hypotheses, p-values, significance level, t-tests, chi-square, sample size.",
+          "prerequisites": ["stats_descriptive"],
+          "level": "Core",
+          "estimated_hours": 6,
+          "learning_objective": "Design and interpret a statistically valid A/B experiment and communicate results to stakeholders.",
+          "proof_type": "exercise"
+        }
+      ]
+    }
+  ]
+}

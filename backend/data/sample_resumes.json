@@ -1,0 +1,28 @@
+{
+  "demo_candidate": {
+    "name": "Demo Candidate: Data Analyst",
+    "target_role": "Data Analyst",
+    "goal": "Transition from university coursework to an entry-level Data Analyst role within 3 months",
+    "hours_per_week": 10,
+    "summary": "Junior Computer Science student with strong coursework in spreadsheet modeling, statistical foundations, and basic Python data scripting. Seeking to build applied production SQL skills and relational data modeling proficiency.",
+    "education": "B.S. in Computer Science, State University (Expected May 2027)",
+    "skills": [
+      {"name": "Microsoft Excel", "subskill": "excel_lookups", "category": "Spreadsheets", "proficiency": "Advanced", "confidence": 0.95, "evidence": "Built dynamic multi-tab sales model using XLOOKUP, INDEX/MATCH, and nested IF statements."},
+      {"name": "Python Data Analysis", "subskill": "python_pandas", "category": "Programming", "proficiency": "Intermediate", "confidence": 0.70, "evidence": "Cleaned customer survey datasets with Pandas and generated Matplotlib distributions."},
+      {"name": "Descriptive Statistics", "subskill": "stats_descriptive", "category": "Analytics", "proficiency": "Intermediate", "confidence": 0.65, "evidence": "Completed coursework in probability distributions, hypothesis testing, and regression analysis."},
+      {"name": "SQL & Databases", "subskill": "sql_basics", "category": "Databases", "proficiency": "Novice", "confidence": 0.25, "evidence": "Understands basic SELECT and WHERE statements from introductory database class. Zero multi-table JOIN or production query experience."}
+    ],
+    "projects": [
+      {
+        "title": "E-Commerce Customer Segmentation Script",
+        "tools": ["Python", "Pandas", "Matplotlib"],
+        "description": "Analyzed a Kaggle 10k-row CSV dataset to identify top spending demographics."
+      },
+      {
+        "title": "Small Business Financial Tracker",
+        "tools": ["Excel", "Pivot Tables"],
+        "description": "Constructed automated cash flow summary with dynamic slicers and charts."
+      }
+    ]
+  }
+}

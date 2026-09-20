@@ -1,0 +1,186 @@
+[
+  {
+    "id": "evid-32e51933",
+    "user_id": "priya-101",
+    "skill": "Spreadsheets",
+    "subskill": "excel_lookups",
+    "evidence": "Built dynamic multi-tab sales model using XLOOKUP, INDEX/MATCH, and nested IF statements.",
+    "score": 90,
+    "confidence": 0.95,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:19:11.271916Z"
+  },
+  {
+    "id": "evid-6282bf99",
+    "user_id": "priya-101",
+    "skill": "Programming",
+    "subskill": "python_pandas",
+    "evidence": "Cleaned customer survey datasets with Pandas and generated Matplotlib distributions.",
+    "score": 65,
+    "confidence": 0.7,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:19:11.272631Z"
+  },
+  {
+    "id": "evid-07e98b5d",
+    "user_id": "priya-101",
+    "skill": "Analytics",
+    "subskill": "stats_descriptive",
+    "evidence": "Completed coursework in probability distributions, hypothesis testing, and regression analysis.",
+    "score": 65,
+    "confidence": 0.65,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:19:11.277202Z"
+  },
+  {
+    "id": "evid-b8687802",
+    "user_id": "priya-101",
+    "skill": "Spreadsheets",
+    "subskill": "excel_lookups",
+    "evidence": "Built dynamic multi-tab sales model using XLOOKUP, INDEX/MATCH, and nested IF statements.",
+    "score": 90,
+    "confidence": 0.95,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:20:40.240436Z"
+  },
+  {
+    "id": "evid-e805cf8f",
+    "user_id": "priya-101",
+    "skill": "Programming",
+    "subskill": "python_pandas",
+    "evidence": "Cleaned customer survey datasets with Pandas and generated Matplotlib distributions.",
+    "score": 65,
+    "confidence": 0.7,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:20:40.241162Z"
+  },
+  {
+    "id": "evid-99de4c51",
+    "user_id": "priya-101",
+    "skill": "Analytics",
+    "subskill": "stats_descriptive",
+    "evidence": "Completed coursework in probability distributions, hypothesis testing, and regression analysis.",
+    "score": 65,
+    "confidence": 0.65,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:20:40.248079Z"
+  },
+  {
+    "id": "evid-e30c3134",
+    "user_id": "learner-001",
+    "skill": "SQL & Relational Databases",
+    "subskill": "multi_table_joins",
+    "evidence": "SELECT name FROM users;",
+    "score": 40,
+    "confidence": 0.9,
+    "weak_concepts": [
+      "LEFT JOIN required for user-to-order aggregation",
+      "The query should reference both users and orders tables",
+      "Multi-table join syntax is missing"
+    ],
+    "next_action": "replan_roadmap",
+    "timestamp": "2026-09-19T20:50:44.164541Z"
+  },
+  {
+    "id": "evid-04b91259",
+    "user_id": "learner-001",
+    "skill": "SQL & Relational Databases",
+    "subskill": "multi_table_joins",
+    "evidence": "SELECT * FROM users;",
+    "score": 40,
+    "confidence": 0.9,
+    "weak_concepts": [
+      "LEFT JOIN required for user-to-order aggregation",
+      "The query should reference both users and orders tables",
+      "Multi-table join syntax is missing"
+    ],
+    "next_action": "replan_roadmap",
+    "timestamp": "2026-09-19T20:50:44.169067Z"
+  },
+  {
+    "id": "evid-54865131",
+    "user_id": "learner-001",
+    "skill": "SQL & Relational Databases",
+    "subskill": "multi_table_joins",
+    "evidence": "SELECT name FROM users;",
+    "score": 40,
+    "confidence": 0.9,
+    "weak_concepts": [
+      "LEFT JOIN required for user-to-order aggregation",
+      "The query should reference both users and orders tables",
+      "Multi-table join syntax is missing"
+    ],
+    "next_action": "replan_roadmap",
+    "timestamp": "2026-09-19T20:51:17.856971Z"
+  },
+  {
+    "id": "evid-bc1b64fb",
+    "user_id": "learner-001",
+    "skill": "SQL & Relational Databases",
+    "subskill": "multi_table_joins",
+    "evidence": "SELECT * FROM users;",
+    "score": 40,
+    "confidence": 0.9,
+    "weak_concepts": [
+      "LEFT JOIN required for user-to-order aggregation",
+      "The query should reference both users and orders tables",
+      "Multi-table join syntax is missing"
+    ],
+    "next_action": "replan_roadmap",
+    "timestamp": "2026-09-19T20:51:17.860749Z"
+  },
+  {
+    "id": "evid-98fc4e5a",
+    "user_id": "priya-101",
+    "skill": "Spreadsheets",
+    "subskill": "excel_lookups",
+    "evidence": "Built dynamic multi-tab sales model using XLOOKUP, INDEX/MATCH, and nested IF statements.",
+    "score": 90,
+    "confidence": 0.95,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:55:42.077876Z"
+  },
+  {
+    "id": "evid-a1bde2e3",
+    "user_id": "priya-101",
+    "skill": "Programming",
+    "subskill": "python_pandas",
+    "evidence": "Cleaned customer survey datasets with Pandas and generated Matplotlib distributions.",
+    "score": 65,
+    "confidence": 0.7,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:55:42.087203Z"
+  },
+  {
+    "id": "evid-2308e74c",
+    "user_id": "priya-101",
+    "skill": "Analytics",
+    "subskill": "stats_descriptive",
+    "evidence": "Completed coursework in probability distributions, hypothesis testing, and regression analysis.",
+    "score": 65,
+    "confidence": 0.65,
+    "weak_concepts": [],
+    "next_action": "proceed_with_curriculum",
+    "timestamp": "2026-09-19T20:55:42.092169Z"
+  },
+  {
+    "id": "evid-96d05352",
+    "user_id": "priya-101",
+    "skill": "SQL & Relational Databases",
+    "subskill": "multi_table_joins",
+    "evidence": "SELECT u.name, SUM(o.amount) AS total_amount\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id\nGROUP BY u.name\nORDER BY total_amount DESC;",
+    "score": 82,
+    "confidence": 0.95,
+    "weak_concepts": [],
+    "next_action": "continue_learning",
+    "timestamp": "2026-09-19T20:56:05.405214Z"
+  }
+]
