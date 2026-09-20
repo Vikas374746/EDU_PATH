@@ -9,7 +9,7 @@ import type {
   QAResponse
 } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_BASE as string) || '/api';
 
 export const api = {
   async getHealth(): Promise<{ status: string; service: string }> {
