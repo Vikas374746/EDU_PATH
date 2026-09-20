@@ -11,29 +11,36 @@ import type {
 
 const API_BASE = (import.meta.env.VITE_API_BASE as string) || '/api';
 
+async function handleResponse<T = any>(res: Response, fallbackError: string): Promise<T> {
+  if (!res.ok) {
+    throw new Error(`${fallbackError} (${res.status})`);
+  }
+  const contentType = res.headers.get('content-type');
+  if (!contentType || !contentType.includes('application/json')) {
+    throw new Error('Backend is currently offline or unreachable.');
+  }
+  return res.json();
+}
+
 export const api = {
   async getHealth(): Promise<{ status: string; service: string }> {
     const res = await fetch(`${API_BASE}/health`);
-    if (!res.ok) throw new Error('Backend unreachable');
-    return res.json();
+    return handleResponse(res, 'Backend unreachable');
   },
 
   async getOntology(): Promise<any> {
     const res = await fetch(`${API_BASE}/ontology`);
-    if (!res.ok) throw new Error('Failed to load ontology');
-    return res.json();
+    return handleResponse(res, 'Failed to load ontology');
   },
 
   async getResources(subskill: string = 'sql_joins'): Promise<{ subskill: string; resources: ResourceItem[] }> {
     const res = await fetch(`${API_BASE}/resources?subskill=${encodeURIComponent(subskill)}`);
-    if (!res.ok) throw new Error('Failed to fetch resources');
-    return res.json();
+    return handleResponse(res, 'Failed to fetch resources');
   },
 
   async seedDemoProfile(): Promise<{ profile: UserProfile; gaps: SkillGapResponse }> {
     const res = await fetch(`${API_BASE}/profile/demo`, { method: 'POST' });
-    if (!res.ok) throw new Error('Failed to load demo profile');
-    return res.json();
+    return handleResponse(res, 'Failed to load demo profile');
   },
 
   async uploadPdfResume(file: File, name: string = 'Learner', targetRole: string = 'Data Analyst'): Promise<{ profile: UserProfile; gaps: SkillGapResponse }> {

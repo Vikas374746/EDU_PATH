@@ -778,8 +778,11 @@ export function AppProvider({ children }: AppProviderProps) {
         const resData = await api.getResources('sql_joins');
         dispatch({ type: 'SET_RESOURCES', payload: resData.resources || [] });
       } catch (err: any) {
-        console.error('Init error:', err);
-        dispatch({ type: 'SET_ERROR', payload: err.message || 'Unable to connect to backend server' });
+        console.warn('Backend is offline or not yet connected:', err?.message);
+        dispatch({
+          type: 'SET_BACKEND_HEALTH',
+          payload: { status: 'offline', service: 'EduPath API' },
+        });
       }
     }
     initApp();
